@@ -15,18 +15,18 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="book">
-    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta property="og:url" content="https://digital-minimalism-for-parents-book.netlify.app/">
     <meta property="og:title" content="Digital Minimalism for Parents">
     <meta property="og:description"
         content="Minimizing Screen Time, Maximizing Childhood. Discover the path to a focused, connected family life.">
-    <meta property="og:image" content="DigitalParentingCover@3x.jpg">
+    <meta property="og:image" content="https://digital-minimalism-for-parents-book.netlify.app/cover.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://yourwebsite.com/">
+    <meta property="twitter:url" content="https://digital-minimalism-for-parents-book.netlify.app/">
     <meta property="twitter:title" content="Digital Minimalism for Parents">
     <meta property="twitter:description" content="Reclaim your family's focus. A new book by Farid Jafarli.">
-    <meta property="twitter:image" content="DigitalParentingCover@3x.jpg">
+    <meta property="twitter:image" content="https://digital-minimalism-for-parents-book.netlify.app/cover.jpg">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -82,7 +82,7 @@
         "name": "Farid Jafarli"
       },
       "url": "https://www.amazon.com/dp/B0FKHFHYKW",
-      "image": "DigitalParentingCover@3x.jpg",
+      "image": "https://digital-minimalism-for-parents-book.netlify.app/cover.jpg",
       "description": "A practical guide for parents to minimize screen time and maximize childhood connection in a digital age."
     }
     </script>
@@ -201,8 +201,7 @@
             <!-- Book Cover Image -->
             <div class="relative w-64 sm:w-80 md:w-96 transform rotate-2 hover:rotate-0 transition duration-500">
                 <div class="w-full h-auto rounded-r-lg book-shadow overflow-hidden bg-gray-900">
-                    <img class="w-full h-auto block" src="DigitalParentingCover@3x.jpg"
-                        alt="Digital Minimalism for Parents Book Cover"
+                    <img class="w-full h-auto block" src="cover.jpg" alt="Digital Minimalism for Parents Book Cover"
                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <!-- Fallback placeholder if image fails -->
                     <div class="hidden w-full h-96 book-placeholder p-8 flex-col">
@@ -587,8 +586,12 @@
                     </div>
                 </div>
                 <div class="mt-10 lg:mt-0 flex justify-center">
-                    <!-- Placeholder for Author Image if available, using a generic icon or book stack for now -->
-                    <div class="h-64 w-64 bg-gray-100 rounded-full flex items-center justify-center">
+                    <!-- Author Image -->
+                    <img src="author.jpg" alt="Farid Jafarli - Author"
+                        class="h-64 w-64 rounded-full object-cover shadow-lg"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <!-- Fallback placeholder if image fails -->
+                    <div class="hidden h-64 w-64 bg-gray-100 rounded-full items-center justify-center">
                         <span class="text-gray-400 font-serif text-6xl">FJ</span>
                     </div>
                 </div>
@@ -632,7 +635,7 @@
         }
 
         // Gemini API Configuration
-        const apiKey = ""; // Provided by execution environment
+        const apiKey = "AIzaSyBUuBzGHQA_qgAQnC_IpghjBeBRSdQjJTA"; // Provided by execution environment
         const apiEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
 
         // Helper to call Gemini
