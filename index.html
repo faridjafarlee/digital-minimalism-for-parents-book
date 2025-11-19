@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Digital Minimalism for Parents | Reclaiming Focus, Family & Freedom</title>
+    <meta name="description"
+        content="Reclaim your family's focus from the screen-obsessed world. A practical guide by Farid Jafarli on minimizing screen time and maximizing childhood.">
+    <meta name="author" content="Farid Jafarli">
+    <meta name="keywords"
+        content="Digital Minimalism, Parenting, Screen Time, Child Development, Family Focus, Farid Jafarli">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="book">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta property="og:title" content="Digital Minimalism for Parents">
+    <meta property="og:description"
+        content="Minimizing Screen Time, Maximizing Childhood. Discover the path to a focused, connected family life.">
+    <meta property="og:image" content="DigitalParentingCover@3x.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourwebsite.com/">
+    <meta property="twitter:title" content="Digital Minimalism for Parents">
+    <meta property="twitter:description" content="Reclaim your family's focus. A new book by Farid Jafarli.">
+    <meta property="twitter:image" content="DigitalParentingCover@3x.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#1a202c', // Dark blue/gray from cover feel
+                            accent: '#e53e3e', // Red accent for CTA
+                            light: '#f7fafc',
+                            cream: '#fffaf0',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Analytics 4 (Placeholder - Replace G-XXXXXXXXXX with your actual ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "Digital Minimalism for Parents: Reclaiming Focus, Family and Freedom in a Screen-Obsessed World",
+      "author": {
+        "@type": "Person",
+        "name": "Farid Jafarli"
+      },
+      "url": "https://www.amazon.com/dp/B0FKHFHYKW",
+      "image": "DigitalParentingCover@3x.jpg",
+      "description": "A practical guide for parents to minimize screen time and maximize childhood connection in a digital age."
+    }
+    </script>
+
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom shadow for the book cover 3D effect */
+        .book-shadow {
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Markdown-like styling for AI output */
+        .ai-output ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .ai-output li {
+            margin-bottom: 0.5rem;
+        }
+
+        .ai-output strong {
+            font-weight: 600;
+            color: #4338ca;
+        }
+
+        /* Book Cover Placeholder Styling */
+        .book-placeholder {
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            font-family: 'Merriweather', serif;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-brand-light">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-lg sm:text-xl font-serif font-bold text-gray-900">Digital Minimalism for
+                        Parents</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#problem" class="text-gray-600 hover:text-gray-900 transition">The Problem</a>
+                    <a href="#why-this-book" class="text-gray-600 hover:text-gray-900 transition">Why This Book?</a>
+                    <a href="#chapters" class="text-gray-600 hover:text-gray-900 transition">Chapters</a>
+                    <a href="#ai-tools" class="text-indigo-600 font-semibold hover:text-indigo-800 transition">Tools</a>
+                    <button onclick="trackAmazonClick('nav')"
+                        class="bg-gray-900 text-white px-5 py-2 rounded-full font-medium hover:bg-gray-800 transition">
+                        Buy on Amazon
+                    </button>
+                </div>
+                <!-- Mobile menu button placeholder -->
+                <div class="flex items-center md:hidden">
+                    <button onclick="trackAmazonClick('mobile_nav')" class="text-gray-900 font-medium">Buy Book</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-brand-cream overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 pb-8 bg-brand-cream sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                    <div class="sm:text-center lg:text-left">
+                        <h1
+                            class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl font-serif leading-tight">
+                            <span class="block xl:inline">Minimizing Screen Time,</span>
+                            <span class="block text-indigo-600 xl:inline">Maximizing Childhood</span>
+                        </h1>
+                        <p
+                            class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                            Reclaim focus, family, and freedom in a screen-obsessed world. The essential guide for
+                            parents tired of the "invisible overload" and ready to build a home centered on connection,
+                            not consumption.
+                        </p>
+                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                            <div class="rounded-md shadow">
+                                <button onclick="trackAmazonClick('hero_primary')"
+                                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-gray-800 md:py-4 md:text-lg transition transform hover:-translate-y-1">
+                                    Get Your Copy on Amazon
+                                    <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="mt-3 sm:mt-0 sm:ml-3">
+                                <a href="#preview"
+                                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg transition">
+                                    Read a Preview
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div
+            class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-brand-cream flex items-center justify-center py-8 lg:py-0">
+            <!-- Book Cover Image -->
+            <div class="relative w-64 sm:w-80 md:w-96 transform rotate-2 hover:rotate-0 transition duration-500">
+                <div class="w-full h-auto rounded-r-lg book-shadow overflow-hidden bg-gray-900">
+                    <img class="w-full h-auto block" src="DigitalParentingCover@3x.jpg"
+                        alt="Digital Minimalism for Parents Book Cover"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <!-- Fallback placeholder if image fails -->
+                    <div class="hidden w-full h-96 book-placeholder p-8 flex-col">
+                        <span class="text-xl font-bold mb-2">Digital Minimalism for Parents</span>
+                        <span class="text-sm opacity-75">Minimizing Screen Time, Maximizing Childhood</span>
+                        <span class="mt-8 text-sm font-semibold uppercase tracking-widest">Farid Jafarli</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hook / The Problem Section -->
+    <section id="problem" class="py-16 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">The Invisible Overload</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl font-serif">
+                    Does your family suffer from "Fragmented Presence"?
+                </p>
+            </div>
+            <div class="prose prose-lg text-gray-500 mx-auto">
+                <p class="mb-6">
+                    It's 7:23 AM. In the past hour, you've already checked your device fourteen times. Email while the
+                    coffee brewed. News headlines during breakfast. A quick scroll while your children ate cereal.
+                </p>
+                <p class="mb-6">
+                    You are physically present in the kitchen, yet somehow absent. Your body occupies the same space as
+                    your family, but your mind flickers between inbox anxiety and the artificial urgency of
+                    notifications.
+                </p>
+                <p class="font-bold text-gray-900">
+                    This is the invisible overload and it’s rewriting the neural pathways of modern family life.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Why This Book is For You -->
+    <section id="why-this-book" class="py-16 bg-brand-light border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl leading-8 font-extrabold text-gray-900 sm:text-4xl font-serif">
+                    Why This Book Is For You
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    You aren't failing as a parent. You are parenting in the most distracted era in human history.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm border-t-4 border-indigo-500">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">For the Exhausted Parent</h3>
+                    <p class="text-gray-600">
+                        If you feel like a "digital traffic controller," constantly managing screen time limits, arguing
+                        about tablets, and policing phones, this book offers a way out of the conflict loop.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm border-t-4 border-indigo-500">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">For the Distracted Soul</h3>
+                    <p class="text-gray-600">
+                        If you catch yourself scrolling while your child tells you a story, and you hate that feeling of
+                        "absent presence," this guide helps you reclaim your own attention first.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm border-t-4 border-indigo-500">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">For the Future-Thinker</h3>
+                    <p class="text-gray-600">
+                        If you worry about what 10,000 hours of screen time is doing to your child's developing brain,
+                        social skills, and creativity, here is the science-backed roadmap to protect them.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features / The Solution -->
+    <section id="solution" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">The Solution</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl font-serif">
+                    A Blueprint for Analog Connection
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    This isn't about banning technology. It's about putting it back in its place so your family can
+                    thrive.
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                    <div class="relative">
+                        <dt>
+                            <div
+                                class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                                    </path>
+                                </svg>
+                            </div>
+                            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">The Minimalist Home</p>
+                        </dt>
+                        <dd class="mt-2 ml-16 text-base text-gray-500">
+                            Learn how to design your physical space for connection, not consumption. Discover why
+                            "visibility drives usage" and how simple environmental tweaks can reduce screen time by 40%.
+                        </dd>
+                    </div>
+
+                    <div class="relative">
+                        <dt>
+                            <div
+                                class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Digital Sabbaths</p>
+                        </dt>
+                        <dd class="mt-2 ml-16 text-base text-gray-500">
+                            Implement weekly rituals of rest. Discover the power of the "24-hour reset" that allows your
+                            family's nervous systems to recalibrate and creativity to bloom.
+                        </dd>
+                    </div>
+
+                    <div class="relative">
+                        <dt>
+                            <div
+                                class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Breaking the Reward Loop</p>
+                        </dt>
+                        <dd class="mt-2 ml-16 text-base text-gray-500">
+                            Stop using screens as currency. Learn why attaching digital rewards to behavior backfires
+                            and how to build intrinsic motivation instead.
+                        </dd>
+                    </div>
+
+                    <div class="relative">
+                        <dt>
+                            <div
+                                class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">The Digital Village</p>
+                        </dt>
+                        <dd class="mt-2 ml-16 text-base text-gray-500">
+                            How to advocate for change beyond your walls. Build a "screen-conscious" community with
+                            schools, grandparents, and neighbors.
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Chapters Section -->
+    <section id="chapters" class="py-16 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <h2 class="text-3xl leading-8 font-extrabold font-serif sm:text-4xl">
+                    What's Inside
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-300">
+                    30 comprehensive chapters guiding you from understanding the problem to raising a digital-ready
+                    adult.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4 text-sm text-gray-300">
+                <div class="space-y-3">
+                    <p><span class="text-indigo-400 font-bold">01.</span> The Invisible Overload</p>
+                    <p><span class="text-indigo-400 font-bold">02.</span> Children of the Scroll</p>
+                    <p><span class="text-indigo-400 font-bold">03.</span> The Parent Trap</p>
+                    <p><span class="text-indigo-400 font-bold">04.</span> The Minimalist Home</p>
+                    <p><span class="text-indigo-400 font-bold">05.</span> Minimalist Routines</p>
+                    <p><span class="text-indigo-400 font-bold">06.</span> Holding the Line</p>
+                    <p><span class="text-indigo-400 font-bold">07.</span> Collaborative Boundaries</p>
+                    <p><span class="text-indigo-400 font-bold">08.</span> Analog Adventures</p>
+                    <p><span class="text-indigo-400 font-bold">09.</span> From Home to Community</p>
+                    <p><span class="text-indigo-400 font-bold">10.</span> Sustaining the Shift</p>
+                </div>
+                <div class="space-y-3">
+                    <p><span class="text-indigo-400 font-bold">11.</span> Tech at School</p>
+                    <p><span class="text-indigo-400 font-bold">12.</span> The Circle of Support</p>
+                    <p><span class="text-indigo-400 font-bold">13.</span> Adapting for Adolescents</p>
+                    <p><span class="text-indigo-400 font-bold">14.</span> Breaking the Reward Loop</p>
+                    <p><span class="text-indigo-400 font-bold">15.</span> Teaching Self-Regulation</p>
+                    <p><span class="text-indigo-400 font-bold">16.</span> Neurodiverse Children</p>
+                    <p><span class="text-indigo-400 font-bold">17.</span> Co-Parenting and Screens</p>
+                    <p><span class="text-indigo-400 font-bold">18.</span> Screens and Emotions</p>
+                    <p><span class="text-indigo-400 font-bold">19.</span> Critical Thinking</p>
+                    <p><span class="text-indigo-400 font-bold">20.</span> Attention as Currency</p>
+                </div>
+                <div class="space-y-3">
+                    <p><span class="text-indigo-400 font-bold">21.</span> Digital Fasting</p>
+                    <p><span class="text-indigo-400 font-bold">22.</span> When Screens Replace Sleep</p>
+                    <p><span class="text-indigo-400 font-bold">23.</span> Beyond the Family Bubble</p>
+                    <p><span class="text-indigo-400 font-bold">24.</span> Future Digital Citizens</p>
+                    <p><span class="text-indigo-400 font-bold">25.</span> From Distraction to Depth</p>
+                    <p><span class="text-indigo-400 font-bold">26.</span> Digital Sabbaths</p>
+                    <p><span class="text-indigo-400 font-bold">27.</span> The Digital Home</p>
+                    <p><span class="text-indigo-400 font-bold">28.</span> Reclaiming Rest</p>
+                    <p><span class="text-indigo-400 font-bold">29.</span> The Digital Village</p>
+                    <p><span class="text-indigo-400 font-bold">30.</span> The Long Game</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Powered Tools Section -->
+    <section id="ai-tools" class="py-16 bg-indigo-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span
+                    class="bg-indigo-100 text-indigo-800 text-sm font-bold px-3 py-1 rounded-full uppercase tracking-wide">Free
+                    Tools</span>
+                <h2 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl font-serif">
+                    Experience Digital Minimalism Now
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Try these AI-powered tools designed to help you implement the book's principles immediately.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Tool 1: The "Spark" Adventure Generator -->
+                <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-indigo-500">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">The "Spark" Adventure Generator ✨</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        Struggling with "I'm bored"? Tell us about your child, and we'll generate a creative,
+                        screen-free activity instantly.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Child's Age</label>
+                            <select id="childAge" class="w-full border-gray-300 rounded-md shadow-sm p-2 border">
+                                <option>3-5 years</option>
+                                <option>6-9 years</option>
+                                <option>10-13 years</option>
+                                <option>14+ years</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Current Interest (e.g.
+                                dinosaurs, space, drawing)</label>
+                            <input type="text" id="childInterest" placeholder="e.g. Building forts"
+                                class="w-full border-gray-300 rounded-md shadow-sm p-2 border">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Available Time</label>
+                            <select id="activityTime" class="w-full border-gray-300 rounded-md shadow-sm p-2 border">
+                                <option>15 minutes</option>
+                                <option>30 minutes</option>
+                                <option>1 hour+</option>
+                            </select>
+                        </div>
+                        <button onclick="generateAdventure()" id="adventureBtn"
+                            class="w-full bg-indigo-600 text-white font-bold py-2 px-4 rounded hover:bg-indigo-700 transition flex items-center justify-center">
+                            <span>Generate Adventure ✨</span>
+                        </button>
+                    </div>
+
+                    <div id="adventureOutput" class="mt-6 hidden">
+                        <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
+                            <h4 class="font-bold text-indigo-800 mb-2">Your Adventure Plan:</h4>
+                            <div id="adventureText" class="text-gray-700 ai-output text-sm"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tool 2: The Digital Balance Coach -->
+                <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-green-500">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Digital Balance Coach ✨</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        Facing a specific screen-time battle? Describe it below, and get a minimalist, compassionate
+                        strategy.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">What's the struggle? (e.g.,
+                                tantrums at dinner)</label>
+                            <textarea id="struggleInput" rows="4"
+                                placeholder="My child throws a fit every time I turn off the iPad..."
+                                class="w-full border-gray-300 rounded-md shadow-sm p-2 border"></textarea>
+                        </div>
+                        <button onclick="generateAdvice()" id="adviceBtn"
+                            class="w-full bg-green-600 text-white font-bold py-2 px-4 rounded hover:bg-green-700 transition flex items-center justify-center">
+                            <span>Get Minimalist Advice ✨</span>
+                        </button>
+                    </div>
+
+                    <div id="adviceOutput" class="mt-6 hidden">
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+                            <h4 class="font-bold text-green-800 mb-2">Coach says:</h4>
+                            <div id="adviceText" class="text-gray-700 ai-output text-sm"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Preview / Chapter 1 Teaser -->
+    <section id="preview" class="py-16 bg-brand-dark text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-serif font-bold mb-8">From Chapter 1: The Invisible Overload</h2>
+            <blockquote class="text-xl italic opacity-90 leading-relaxed">
+                "The message transmitted isn't intentional, but it's powerful: Digital input matters more than human
+                connection. Immediate responses trump sustained conversation. The virtual world holds more interest than
+                the physical one. Your brain wasn't designed for this. Evolution shaped human cognition for sustained
+                focus... The digital age hijacks these ancient systems."
+            </blockquote>
+            <div class="mt-10">
+                <p class="text-lg mb-6">Read the full guide to reclaiming your life.</p>
+                <button onclick="trackAmazonClick('preview_section')"
+                    class="bg-white text-gray-900 px-8 py-3 rounded-md font-bold hover:bg-gray-100 transition">
+                    Buy Now on Amazon
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Author Section -->
+    <section id="author" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+                <div>
+                    <h2 class="text-3xl font-extrabold font-serif text-gray-900 sm:text-4xl">
+                        About the Author
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-500">
+                        <strong>Farid Jafarli</strong> is a researcher and author dedicated to helping families navigate
+                        the complexities of the modern world. With a background in economics and research, Farid brings
+                        an analytical yet deeply empathetic approach to the "attention economy."
+                    </p>
+                    <p class="mt-4 text-lg text-gray-500">
+                        His work focuses on the intersection of human behavior, technology, and family dynamics. He is
+                        the author of <em>The Invisible Lab</em> and <em>Mindful Parenting</em>. In <em>Digital
+                            Minimalism for Parents</em>, he distills complex research into actionable strategies that
+                        help parents move from "digital overwhelm" to "digital intentionality."
+                    </p>
+                    <div class="mt-6">
+                        <a href="https://www.amazon.com/stores/author/B0FNWPDCLQ/about" target="_blank"
+                            class="text-indigo-600 hover:text-indigo-500 font-medium">
+                            Visit Author Page &rarr;
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-10 lg:mt-0 flex justify-center">
+                    <!-- Placeholder for Author Image if available, using a generic icon or book stack for now -->
+                    <div class="h-64 w-64 bg-gray-100 rounded-full flex items-center justify-center">
+                        <span class="text-gray-400 font-serif text-6xl">FJ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 lg:flex lg:items-center lg:justify-between">
+            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl font-serif">
+                <span class="block">Ready to maximize childhood?</span>
+                <span class="block text-indigo-600">Start your digital minimalism journey today.</span>
+            </h2>
+            <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+                <div class="inline-flex rounded-md shadow">
+                    <button onclick="trackAmazonClick('footer_cta')"
+                        class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition">
+                        Buy on Amazon
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-gray-200 text-center text-gray-400">
+            <p>&copy; 2025 Farid Jafarli. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Amazon Tracking
+        function trackAmazonClick(location) {
+            if (typeof gtag === 'function') {
+                gtag('event', 'click_amazon', {
+                    'event_category': 'conversion',
+                    'event_label': location,
+                    'transport_type': 'beacon'
+                });
+            }
+            window.open('https://www.amazon.com/dp/B0FKHFHYKW', '_blank');
+        }
+
+        // Gemini API Configuration
+        const apiKey = ""; // Provided by execution environment
+        const apiEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+
+        // Helper to call Gemini
+        async function callGemini(prompt, systemInstruction) {
+            try {
+                const response = await fetch(apiEndpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        contents: [{
+                            parts: [{ text: prompt }]
+                        }],
+                        systemInstruction: {
+                            parts: [{ text: systemInstruction }]
+                        }
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API Error: ${response.status}`);
+                }
+
+                const data = await response.json();
+                return data.candidates[0].content.parts[0].text;
+            } catch (error) {
+                console.error("Gemini API Error:", error);
+                // Basic retry logic or error reporting
+                return "I'm having trouble connecting right now. Please try again in a moment.";
+            }
+        }
+
+        // Adventure Generator Logic
+        async function generateAdventure() {
+            const btn = document.getElementById('adventureBtn');
+            const outputDiv = document.getElementById('adventureOutput');
+            const outputText = document.getElementById('adventureText');
+
+            const age = document.getElementById('childAge').value;
+            const interest = document.getElementById('childInterest').value || "general fun";
+            const time = document.getElementById('activityTime').value;
+
+            // UI State: Loading
+            btn.disabled = true;
+            btn.innerHTML = `<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Dreaming up fun...`;
+            outputDiv.classList.add('hidden');
+
+            const prompt = `Suggest 3 creative, screen-free activities for a ${age} child interested in ${interest} that take about ${time}. 
+            Requirements:
+            1. Low prep (household items).
+            2. Focus on creativity or physical movement.
+            3. Brief 1-sentence description for each.
+            4. Use emojis.
+            Format as a simple HTML list (<ul>).`;
+
+            const systemPrompt = "You are an expert in child development and analog play, inspired by the book 'Digital Minimalism for Parents'. You suggest engaging, screen-free activities.";
+
+            const result = await callGemini(prompt, systemPrompt);
+
+            // UI State: Success
+            outputText.innerHTML = result; // Gemini returns markdown/html friendly text usually
+            outputDiv.classList.remove('hidden');
+            btn.disabled = false;
+            btn.innerHTML = `<span>Generate Adventure ✨</span>`;
+        }
+
+        // Balance Coach Logic
+        async function generateAdvice() {
+            const btn = document.getElementById('adviceBtn');
+            const outputDiv = document.getElementById('adviceOutput');
+            const outputText = document.getElementById('adviceText');
+            const struggle = document.getElementById('struggleInput').value;
+
+            if (!struggle) {
+                alert("Please describe a struggle first.");
+                return;
+            }
+
+            // UI State: Loading
+            btn.disabled = true;
+            btn.innerHTML = `<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Thinking...`;
+            outputDiv.classList.add('hidden');
+
+            const prompt = `A parent is struggling with: "${struggle}". 
+            Provide one specific, empathetic, and actionable tip based on digital minimalism principles.
+            Keep it under 60 words. Be encouraging but firm about boundaries.`;
+
+            const systemPrompt = "You are a compassionate parenting coach specializing in digital minimalism. You help parents set boundaries with love.";
+
+            const result = await callGemini(prompt, systemPrompt);
+
+            // UI State: Success
+            outputText.innerText = result;
+            outputDiv.classList.remove('hidden');
+            btn.disabled = false;
+            btn.innerHTML = `<span>Get Minimalist Advice ✨</span>`;
+        }
+    </script>
+
+</body>
+
+</html>
