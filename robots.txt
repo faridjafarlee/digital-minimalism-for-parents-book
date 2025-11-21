@@ -1,0 +1,11 @@
+# robots.txt for Digital Minimalism for Parents Book Website
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://digital-minimalism-for-parents-book.netlify.app/sitemap.xml
+
+# Disallow crawling of any potential future admin or private directories
+Disallow: /admin/
+Disallow: /private/
